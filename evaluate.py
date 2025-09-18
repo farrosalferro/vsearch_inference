@@ -46,7 +46,22 @@ def evaluate_predictions(data: Dict[str, Any]) -> Dict[str, Dict[str, int]]:
     return dict(category_stats)
 
 
-def print_results(category_stats: Dict[str, Dict[str, int]]) -> None:
+def calculate_total_time(data: Dict[str, Any]) -> float:
+    """
+    Calculate total time from the 'time' key in the data.
+    
+    Returns:
+        Total time as the sum of all time entries, or 0 if no time data found.
+    """
+    time_data = data.get("time", {})
+    if not time_data:
+        return 0.0
+    
+    total_time = sum(time_data.values())
+    return total_time
+
+
+def print_results(category_stats: Dict[str, Dict[str, int]], total_time: float = None) -> None:
     """Print evaluation results in a formatted table."""
     print("\n" + "="*60)
     print("EVALUATION RESULTS")
@@ -71,6 +86,10 @@ def print_results(category_stats: Dict[str, Dict[str, int]]) -> None:
     overall_accuracy = (total_correct / total_samples * 100) if total_samples > 0 else 0
     print(f"{'OVERALL':<25} {total_correct:<10} {total_samples:<10} {overall_accuracy:.1f}%")
     print("="*60)
+    
+    if total_time is not None:
+        print(f"\nTOTAL TIME: {total_time:.2f} seconds")
+        print("="*60)
 
 
 def main():
@@ -101,8 +120,11 @@ def main():
         print("No records found in the answer file.")
         return
     
+    # Calculate total time
+    total_time = calculate_total_time(data)
+    
     # Print results
-    print_results(category_stats)
+    print_results(category_stats, total_time)
     
     # Show detailed breakdown if requested
     if args.detailed:
