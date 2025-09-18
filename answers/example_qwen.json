@@ -1,0 +1,1468 @@
+{
+  "config": {
+    "question_file": "/media/farrosalferro/College/research/Open-GroundingDino/data/vstar_bench/test_questions.jsonl",
+    "answers_file": "/media/farrosalferro/College/research/Open-GroundingDino/full_inference/answers/example_qwen.json",
+    "image_folder": "/media/farrosalferro/College/research/Open-GroundingDino/data/vstar_bench",
+    "mllm": "qwen_3b",
+    "ovd": "mmgroundingdino_tiny",
+    "device_map": "cuda",
+    "mllm_model_path": "Qwen/Qwen2.5-VL-3B-Instruct",
+    "mllm_model_base": null,
+    "extra_prompt": "",
+    "temperature": 0.2,
+    "top_p": null,
+    "num_beams": 1,
+    "ovd_model_path": "openmmlab-community/mm_grounding_dino_tiny_o365v1_goldg",
+    "detection_args": {
+      "detection_method": "recursion",
+      "min_region_size": 336,
+      "max_depth": 5,
+      "score_threshold": 0.4
+    },
+    "prompting_method": {
+      "direct_attributes": "explicit",
+      "relative_position": "oracle"
+    }
+  },
+  "record": [
+    {
+      "sample_id": "150",
+      "original_prompt": "Is the suitcase on the left or right side of the river?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "B",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_36787.jpg",
+      "target_objects": [
+        "suitcase",
+        "river"
+      ],
+      "target_objects_extraction_time": 0.35303449630737305,
+      "bbox": [
+        [
+          0,
+          673,
+          336,
+          1009
+        ],
+        [
+          935,
+          855,
+          1271,
+          1191
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 1.0358099937438965,
+      "modified_prompt": "Is the suitcase on the left or right side of the river?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "B",
+      "mllm_time": 0.377305269241333
+    },
+    {
+      "sample_id": "151",
+      "original_prompt": "Is the red chair on the left or right side of the road?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "B",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_25678.jpg",
+      "target_objects": [
+        "red chair",
+        "road"
+      ],
+      "target_objects_extraction_time": 0.13786911964416504,
+      "bbox": [
+        [
+          1298,
+          825,
+          1634,
+          1161
+        ],
+        [
+          1126,
+          1027,
+          1462,
+          1363
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.9409458637237549,
+      "modified_prompt": "Is the red chair on the left or right side of the road?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "B",
+      "mllm_time": 0.20729565620422363
+    },
+    {
+      "sample_id": "152",
+      "original_prompt": "Is the bowl on the left or right side of the faucet?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "A",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_51681.jpg",
+      "target_objects": [
+        "bowl",
+        "faucet"
+      ],
+      "target_objects_extraction_time": 0.14303016662597656,
+      "bbox": [
+        [
+          984,
+          1164,
+          1320,
+          1500
+        ],
+        [
+          1300,
+          885,
+          1636,
+          1221
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.7386302947998047,
+      "modified_prompt": "Is the bowl on the left or right side of the faucet?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "B",
+      "mllm_time": 0.2487187385559082
+    },
+    {
+      "sample_id": "153",
+      "original_prompt": "Is the white truck on the left or right side of the red truck?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "B",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_65804.jpg",
+      "target_objects": [
+        "white truck",
+        "red truck"
+      ],
+      "target_objects_extraction_time": 0.16100478172302246,
+      "bbox": [
+        [
+          674,
+          1164,
+          1010,
+          1500
+        ],
+        [
+          0,
+          575,
+          336,
+          911
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.4089975357055664,
+      "modified_prompt": "Is the white truck on the left or right side of the red truck?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "A",
+      "mllm_time": 0.5267698764801025
+    },
+    {
+      "sample_id": "154",
+      "original_prompt": "Is the pillar box on the left or right side of the telephone booth?\n(A) right.\n(B) left.\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "A",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_62783.jpg",
+      "target_objects": [
+        "pillar box",
+        "telephone booth"
+      ],
+      "target_objects_extraction_time": 0.15284371376037598,
+      "bbox": [
+        [
+          1155,
+          1142,
+          1491,
+          1478
+        ],
+        [
+          386,
+          914,
+          722,
+          1250
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.8430604934692383,
+      "modified_prompt": "Is the pillar box on the left or right side of the telephone booth?\n(A) right.\n(B) left.\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "B",
+      "mllm_time": 0.37375855445861816
+    },
+    {
+      "sample_id": "155",
+      "original_prompt": "Is the motorcyclist on the left or right side of the truck?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "A",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_64142.jpg",
+      "target_objects": [
+        "motorcyclist",
+        "truck"
+      ],
+      "target_objects_extraction_time": 0.15622377395629883,
+      "bbox": [
+        [
+          1670,
+          734,
+          2006,
+          1070
+        ],
+        [
+          1048,
+          377,
+          1384,
+          713
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.464832067489624,
+      "modified_prompt": "Is the motorcyclist on the left or right side of the truck?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "A",
+      "mllm_time": 0.40978288650512695
+    },
+    {
+      "sample_id": "156",
+      "original_prompt": "Is the baby carriage on the left or right side of the cone?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "A",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_24971.jpg",
+      "target_objects": [
+        "baby carriage",
+        "cone"
+      ],
+      "target_objects_extraction_time": 0.13968253135681152,
+      "bbox": [
+        [
+          299,
+          1019,
+          635,
+          1355
+        ],
+        [
+          148,
+          1028,
+          484,
+          1364
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.9093494415283203,
+      "modified_prompt": "Is the baby carriage on the left or right side of the cone?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "B",
+      "mllm_time": 0.16018962860107422
+    },
+    {
+      "sample_id": "157",
+      "original_prompt": "Is the sky wheel on the left or right side of the person on the horse?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "B",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_7626.jpg",
+      "target_objects": [
+        "sky wheel",
+        "person",
+        "horse"
+      ],
+      "target_objects_extraction_time": 0.19189786911010742,
+      "bbox": [
+        [
+          2807,
+          742,
+          3143,
+          1078
+        ],
+        [
+          2338,
+          893,
+          2674,
+          1229
+        ],
+        [
+          2338,
+          895,
+          2674,
+          1231
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true,
+        true
+      ],
+      "ovd_time": 0.7579140663146973,
+      "modified_prompt": "Is the sky wheel on the left or right side of the person on the horse?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "B",
+      "mllm_time": 0.2648189067840576
+    },
+    {
+      "sample_id": "158",
+      "original_prompt": "Is the pillar box on the left or right side of the man with the cane?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "B",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_58331.jpg",
+      "target_objects": [
+        "pillar box",
+        "man",
+        "cane"
+      ],
+      "target_objects_extraction_time": 0.18466401100158691,
+      "bbox": [
+        [
+          1137,
+          1091,
+          1473,
+          1427
+        ],
+        [
+          711,
+          1065,
+          1047,
+          1401
+        ],
+        [
+          444,
+          1149,
+          780,
+          1485
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true,
+        true
+      ],
+      "ovd_time": 0.8998997211456299,
+      "modified_prompt": "Is the pillar box on the left or right side of the man with the cane?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "A",
+      "mllm_time": 0.275968074798584
+    },
+    {
+      "sample_id": "159",
+      "original_prompt": "Is the motorcycle on the left or right side of the street?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "A",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_57960.jpg",
+      "target_objects": [
+        "motorcycle",
+        "street"
+      ],
+      "target_objects_extraction_time": 0.14107584953308105,
+      "bbox": [
+        [
+          1164,
+          1304,
+          1500,
+          1640
+        ],
+        [
+          910,
+          1672,
+          1246,
+          2008
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.4829137325286865,
+      "modified_prompt": "Is the motorcycle on the left or right side of the street?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "B",
+      "mllm_time": 0.2916412353515625
+    },
+    {
+      "sample_id": "160",
+      "original_prompt": "Is the blue luggage on the left or right side of the bus?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "A",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_83235.jpg",
+      "target_objects": [
+        "luggage",
+        "bus"
+      ],
+      "target_objects_extraction_time": 0.15195608139038086,
+      "bbox": [
+        [
+          940,
+          638,
+          1276,
+          974
+        ],
+        [
+          937,
+          645,
+          1273,
+          981
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.4768855571746826,
+      "modified_prompt": "Is the blue luggage on the left or right side of the bus?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "B",
+      "mllm_time": 0.1279926300048828
+    },
+    {
+      "sample_id": "161",
+      "original_prompt": "Is the small red car on the left or right side of the baby carriage?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "A",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_23575.jpg",
+      "target_objects": [
+        "car",
+        "baby carriage"
+      ],
+      "target_objects_extraction_time": 0.15869927406311035,
+      "bbox": [
+        [
+          1914,
+          863,
+          2250,
+          1199
+        ],
+        [
+          914,
+          799,
+          1250,
+          1135
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.4801492691040039,
+      "modified_prompt": "Is the small red car on the left or right side of the baby carriage?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "A",
+      "mllm_time": 0.3384883403778076
+    },
+    {
+      "sample_id": "162",
+      "original_prompt": "Is the woman with a backpack on the left or right side of the person with a beanie?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "B",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_24464.jpg",
+      "target_objects": [
+        "woman",
+        "backpack",
+        "person",
+        "beanie"
+      ],
+      "target_objects_extraction_time": 0.21671366691589355,
+      "bbox": [
+        [
+          998,
+          1150,
+          1334,
+          1486
+        ],
+        [
+          0,
+          979,
+          336,
+          1315
+        ],
+        [
+          675,
+          1093,
+          1011,
+          1429
+        ],
+        [
+          976,
+          1099,
+          1312,
+          1435
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "ovd_time": 1.9013981819152832,
+      "modified_prompt": "Is the woman with a backpack on the left or right side of the person with a beanie?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "B",
+      "mllm_time": 0.4184694290161133
+    },
+    {
+      "sample_id": "163",
+      "original_prompt": "Is the kid with black shirt on the left or right side of the kid with blue shirt?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "B",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_4953.jpg",
+      "target_objects": [
+        "kid with black shirt",
+        "kid with blue shirt"
+      ],
+      "target_objects_extraction_time": 0.23425054550170898,
+      "bbox": [
+        [
+          1370,
+          634,
+          1706,
+          970
+        ],
+        [
+          1090,
+          614,
+          1426,
+          950
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.6820507049560547,
+      "modified_prompt": "Is the kid with black shirt on the left or right side of the kid with blue shirt?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "B",
+      "mllm_time": 0.1782822608947754
+    },
+    {
+      "sample_id": "164",
+      "original_prompt": "Is the yellow car on the left or right side of the pool?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "A",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_65606.jpg",
+      "target_objects": [
+        "yellow car",
+        "pool"
+      ],
+      "target_objects_extraction_time": 0.14676618576049805,
+      "bbox": [
+        [
+          1871,
+          1018,
+          2207,
+          1354
+        ],
+        [
+          1371,
+          1108,
+          1707,
+          1444
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.6077415943145752,
+      "modified_prompt": "Is the yellow car on the left or right side of the pool?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "B",
+      "mllm_time": 0.24836111068725586
+    },
+    {
+      "sample_id": "165",
+      "original_prompt": "Is the green bucket on the left or right side of the red tent?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "B",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_87051.jpg",
+      "target_objects": [
+        "green bucket",
+        "red tent"
+      ],
+      "target_objects_extraction_time": 0.16766071319580078,
+      "bbox": [
+        [
+          0,
+          891,
+          336,
+          1227
+        ],
+        [
+          729,
+          389,
+          1065,
+          725
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.47966504096984863,
+      "modified_prompt": "Is the green bucket on the left or right side of the red tent?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "B",
+      "mllm_time": 0.5405495166778564
+    },
+    {
+      "sample_id": "166",
+      "original_prompt": "Is the blue bottle on the left or right side of the carton?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "B",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_45802.jpg",
+      "target_objects": [
+        "blue bottle",
+        "carton"
+      ],
+      "target_objects_extraction_time": 0.1582484245300293,
+      "bbox": [
+        [
+          0,
+          823,
+          336,
+          1159
+        ],
+        [
+          669,
+          817,
+          1005,
+          1153
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.6847207546234131,
+      "modified_prompt": "Is the blue bottle on the left or right side of the carton?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "B",
+      "mllm_time": 0.2690727710723877
+    },
+    {
+      "sample_id": "167",
+      "original_prompt": "Is the wheelchair on the left or right side of the lamp post?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "B",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_23298.jpg",
+      "target_objects": [
+        "wheelchair",
+        "lamp post"
+      ],
+      "target_objects_extraction_time": 0.1754903793334961,
+      "bbox": [
+        [
+          7,
+          896,
+          343,
+          1232
+        ],
+        [
+          152,
+          515,
+          488,
+          851
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.6804447174072266,
+      "modified_prompt": "Is the wheelchair on the left or right side of the lamp post?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "B",
+      "mllm_time": 0.2994534969329834
+    },
+    {
+      "sample_id": "168",
+      "original_prompt": "Is the dog on the left or right side of the blue bicycle?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "B",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_69550.jpg",
+      "target_objects": [
+        "dog",
+        "bicycle"
+      ],
+      "target_objects_extraction_time": 0.12569475173950195,
+      "bbox": [
+        [
+          462,
+          1070,
+          798,
+          1406
+        ],
+        [
+          587,
+          1089,
+          923,
+          1425
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.7039680480957031,
+      "modified_prompt": "Is the dog on the left or right side of the blue bicycle?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "A",
+      "mllm_time": 0.15733718872070312
+    },
+    {
+      "sample_id": "169",
+      "original_prompt": "Is the keyboard on the left or right side of the guitar?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "A",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_61594.jpg",
+      "target_objects": [
+        "keyboard",
+        "guitar"
+      ],
+      "target_objects_extraction_time": 0.13196754455566406,
+      "bbox": [
+        [
+          910,
+          1009,
+          1246,
+          1345
+        ],
+        [
+          1295,
+          602,
+          1631,
+          938
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.49390459060668945,
+      "modified_prompt": "Is the keyboard on the left or right side of the guitar?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "A",
+      "mllm_time": 0.34580373764038086
+    },
+    {
+      "sample_id": "170",
+      "original_prompt": "Is the dog on the left or right side of the crosswalk?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "A",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_5613.jpg",
+      "target_objects": [
+        "dog",
+        "crosswalk"
+      ],
+      "target_objects_extraction_time": 0.14592456817626953,
+      "bbox": [
+        [
+          1912,
+          953,
+          2248,
+          1289
+        ],
+        [
+          1669,
+          1163,
+          2005,
+          1499
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.4761509895324707,
+      "modified_prompt": "Is the dog on the left or right side of the crosswalk?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "A",
+      "mllm_time": 0.2394697666168213
+    },
+    {
+      "sample_id": "171",
+      "original_prompt": "Is the vehicle on the left or right side of the blue umbrella?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "B",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_40977.jpg",
+      "target_objects": [
+        "vehicle",
+        "blue umbrella"
+      ],
+      "target_objects_extraction_time": 0.14503979682922363,
+      "bbox": [
+        [
+          238,
+          588,
+          574,
+          924
+        ],
+        [
+          519,
+          973,
+          855,
+          1309
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.6987795829772949,
+      "modified_prompt": "Is the vehicle on the left or right side of the blue umbrella?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "B",
+      "mllm_time": 0.29068970680236816
+    },
+    {
+      "sample_id": "172",
+      "original_prompt": "Is the steel ladder on the left or right side of the wagon?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "A",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_79958.jpg",
+      "target_objects": [
+        "steel ladder",
+        "wagon"
+      ],
+      "target_objects_extraction_time": 0.14685511589050293,
+      "bbox": [
+        [
+          1222,
+          633,
+          1558,
+          969
+        ],
+        [
+          769,
+          686,
+          1105,
+          1022
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.9789764881134033,
+      "modified_prompt": "Is the steel ladder on the left or right side of the wagon?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "A",
+      "mllm_time": 0.23681998252868652
+    },
+    {
+      "sample_id": "173",
+      "original_prompt": "Is the red vehicle on the left or right side of the sculpture?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "B",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_5465.jpg",
+      "target_objects": [
+        "red vehicle",
+        "sculpture"
+      ],
+      "target_objects_extraction_time": 0.14695096015930176,
+      "bbox": [
+        [
+          1790,
+          458,
+          2126,
+          794
+        ],
+        [
+          498,
+          430,
+          834,
+          766
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.42941927909851074,
+      "modified_prompt": "Is the red vehicle on the left or right side of the sculpture?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "B",
+      "mllm_time": 0.37634706497192383
+    },
+    {
+      "sample_id": "174",
+      "original_prompt": "Is the slide on the left or right side of the life buoy?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "B",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_77731.jpg",
+      "target_objects": [
+        "slide",
+        "life buoy"
+      ],
+      "target_objects_extraction_time": 0.14377403259277344,
+      "bbox": [
+        [
+          1082,
+          603,
+          1418,
+          939
+        ],
+        [
+          164,
+          672,
+          500,
+          1008
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.5902433395385742,
+      "modified_prompt": "Is the slide on the left or right side of the life buoy?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "A",
+      "mllm_time": 0.3302888870239258
+    },
+    {
+      "sample_id": "175",
+      "original_prompt": "Is the green surfboard on the left or right side of the purple umbrella?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "B",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_29022.jpg",
+      "target_objects": [
+        "green surfboard",
+        "purple umbrella"
+      ],
+      "target_objects_extraction_time": 0.18207168579101562,
+      "bbox": [
+        [
+          485,
+          453,
+          821,
+          789
+        ],
+        [
+          961,
+          794,
+          1297,
+          1130
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.441997766494751,
+      "modified_prompt": "Is the green surfboard on the left or right side of the purple umbrella?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "B",
+      "mllm_time": 0.34304380416870117
+    },
+    {
+      "sample_id": "176",
+      "original_prompt": "Is the broom on the left or right side of the folded chair?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "B",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_71151.jpg",
+      "target_objects": [
+        "broom",
+        "folded chair"
+      ],
+      "target_objects_extraction_time": 0.1641395092010498,
+      "bbox": [
+        [
+          534,
+          616,
+          870,
+          952
+        ],
+        [
+          617,
+          694,
+          953,
+          1030
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.44059300422668457,
+      "modified_prompt": "Is the broom on the left or right side of the folded chair?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "B",
+      "mllm_time": 0.16265535354614258
+    },
+    {
+      "sample_id": "177",
+      "original_prompt": "Is the soccer ball on the left or right side of the long bench?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "B",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_49792.jpg",
+      "target_objects": [
+        "soccer ball",
+        "long bench"
+      ],
+      "target_objects_extraction_time": 0.18483948707580566,
+      "bbox": [
+        [
+          453,
+          860,
+          789,
+          1196
+        ],
+        [
+          1746,
+          922,
+          2082,
+          1258
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.5192337036132812,
+      "modified_prompt": "Is the soccer ball on the left or right side of the long bench?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "B",
+      "mllm_time": 0.385831356048584
+    },
+    {
+      "sample_id": "178",
+      "original_prompt": "Is the baby carriage on the left or right side of the cyclist?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "B",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_64257.jpg",
+      "target_objects": [
+        "baby carriage",
+        "cyclist"
+      ],
+      "target_objects_extraction_time": 0.14341306686401367,
+      "bbox": [
+        [
+          529,
+          719,
+          865,
+          1055
+        ],
+        [
+          2152,
+          704,
+          2488,
+          1040
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.7813589572906494,
+      "modified_prompt": "Is the baby carriage on the left or right side of the cyclist?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "A",
+      "mllm_time": 0.4375443458557129
+    },
+    {
+      "sample_id": "179",
+      "original_prompt": "Is the bucket on the left or right side of the cyclist?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "A",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_86732.jpg",
+      "target_objects": [
+        "bucket",
+        "cyclist"
+      ],
+      "target_objects_extraction_time": 0.1260695457458496,
+      "bbox": [
+        [
+          1759,
+          766,
+          2095,
+          1102
+        ],
+        [
+          379,
+          1046,
+          715,
+          1382
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.4933593273162842,
+      "modified_prompt": "Is the bucket on the left or right side of the cyclist?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "B",
+      "mllm_time": 0.5856914520263672
+    },
+    {
+      "sample_id": "180",
+      "original_prompt": "Is the telephone booth on the left or right side of the yellow van?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "A",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_34785.jpg",
+      "target_objects": [
+        "telephone booth",
+        "yellow van"
+      ],
+      "target_objects_extraction_time": 0.16157031059265137,
+      "bbox": [
+        [
+          858,
+          1051,
+          1194,
+          1387
+        ],
+        [
+          759,
+          1017,
+          1095,
+          1353
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.44571924209594727,
+      "modified_prompt": "Is the telephone booth on the left or right side of the yellow van?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "A",
+      "mllm_time": 0.15073037147521973
+    },
+    {
+      "sample_id": "181",
+      "original_prompt": "Is the red balloon above or below the white balloon?\n(A) below\n(B) above\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "A",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_46221.jpg",
+      "target_objects": [
+        "red balloon",
+        "white balloon"
+      ],
+      "target_objects_extraction_time": 0.1664736270904541,
+      "bbox": [
+        [
+          1437,
+          599,
+          1773,
+          935
+        ],
+        [
+          1401,
+          558,
+          1737,
+          894
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.4554319381713867,
+      "modified_prompt": "Is the red balloon above or below the white balloon?\n(A) below\n(B) above\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "A",
+      "mllm_time": 0.12834811210632324
+    },
+    {
+      "sample_id": "182",
+      "original_prompt": "Which one is closer to the camera, the black vehicle or the silver vehicle?\n(A) black vehicle\n(B) silver vehicle\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "A",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_6531.jpg",
+      "target_objects": [
+        "black vehicle",
+        "silver vehicle"
+      ],
+      "target_objects_extraction_time": 0.1688241958618164,
+      "bbox": [
+        [
+          1254,
+          605,
+          1590,
+          941
+        ],
+        [
+          1333,
+          561,
+          1669,
+          897
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.45131897926330566,
+      "modified_prompt": "Which one is closer to the camera, the black vehicle or the silver vehicle?\n(A) black vehicle\n(B) silver vehicle\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "A",
+      "mllm_time": 0.15207886695861816
+    },
+    {
+      "sample_id": "183",
+      "original_prompt": "Which one is closer to the camera, the water bottle or the vehicle?\n(A) water bottle\n(B) vehicle\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "A",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_3222.jpg",
+      "target_objects": [
+        "water bottle",
+        "vehicle"
+      ],
+      "target_objects_extraction_time": 0.14804744720458984,
+      "bbox": [
+        [
+          151,
+          761,
+          487,
+          1097
+        ],
+        [
+          1560,
+          356,
+          1896,
+          692
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.4019906520843506,
+      "modified_prompt": "Which one is closer to the camera, the water bottle or the vehicle?\n(A) water bottle\n(B) vehicle\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "A",
+      "mllm_time": 0.7317092418670654
+    },
+    {
+      "sample_id": "184",
+      "original_prompt": "Is the scooter on the left or right side of the cyclist?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "A",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_33280.jpg",
+      "target_objects": [
+        "scooter",
+        "cyclist"
+      ],
+      "target_objects_extraction_time": 0.16290020942687988,
+      "bbox": [
+        [
+          3398,
+          645,
+          3734,
+          981
+        ],
+        [
+          3055,
+          715,
+          3391,
+          1051
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.7096467018127441,
+      "modified_prompt": "Is the scooter on the left or right side of the cyclist?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "A",
+      "mllm_time": 0.22083544731140137
+    },
+    {
+      "sample_id": "185",
+      "original_prompt": "Is the volleyball on the left or right side of the man with white cap?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "A",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_53377.jpg",
+      "target_objects": [
+        "volleyball",
+        "man",
+        "white cap"
+      ],
+      "target_objects_extraction_time": 0.21878933906555176,
+      "bbox": [
+        [
+          1068,
+          724,
+          1404,
+          1060
+        ],
+        [
+          1375,
+          580,
+          1711,
+          916
+        ],
+        [
+          1368,
+          504,
+          1704,
+          840
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true,
+        true
+      ],
+      "ovd_time": 0.65545654296875,
+      "modified_prompt": "Is the volleyball on the left or right side of the man with white cap?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "A",
+      "mllm_time": 0.2467663288116455
+    },
+    {
+      "sample_id": "186",
+      "original_prompt": "Is the blue mask on the left or right side of the black mask?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "B",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_7621.jpg",
+      "target_objects": [
+        "blue mask",
+        "black mask"
+      ],
+      "target_objects_extraction_time": 0.17258381843566895,
+      "bbox": [
+        [
+          571,
+          266,
+          907,
+          602
+        ],
+        [
+          572,
+          264,
+          908,
+          600
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.632206916809082,
+      "modified_prompt": "Is the blue mask on the left or right side of the black mask?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "B",
+      "mllm_time": 0.12188911437988281
+    },
+    {
+      "sample_id": "187",
+      "original_prompt": "Is the street lamp on the left or right side of the blue van?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "A",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_42676.jpg",
+      "target_objects": [
+        "street lamp",
+        "blue van"
+      ],
+      "target_objects_extraction_time": 0.16624975204467773,
+      "bbox": [
+        [
+          775,
+          730,
+          1111,
+          1066
+        ],
+        [
+          0,
+          848,
+          336,
+          1184
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.45714354515075684,
+      "modified_prompt": "Is the street lamp on the left or right side of the blue van?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "A",
+      "mllm_time": 0.32526421546936035
+    },
+    {
+      "sample_id": "188",
+      "original_prompt": "Is the yellow umbrella on the left or right side of the pink umbrella?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "A",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_40555.jpg",
+      "target_objects": [
+        "yellow umbrella",
+        "pink umbrella"
+      ],
+      "target_objects_extraction_time": 0.16209793090820312,
+      "bbox": [
+        [
+          1015,
+          904,
+          1351,
+          1240
+        ],
+        [
+          1078,
+          825,
+          1414,
+          1161
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.4995694160461426,
+      "modified_prompt": "Is the yellow umbrella on the left or right side of the pink umbrella?\n(A) left\n(B) right\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "A",
+      "mllm_time": 0.1470174789428711
+    },
+    {
+      "sample_id": "189",
+      "original_prompt": "Is the red suitcase on the left or right side of the red stool?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "B",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_57152.jpg",
+      "target_objects": [
+        "red suitcase",
+        "red stool"
+      ],
+      "target_objects_extraction_time": 0.16796636581420898,
+      "bbox": [
+        [
+          515,
+          821,
+          851,
+          1157
+        ],
+        [
+          1000,
+          894,
+          1336,
+          1230
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 0.48548412322998047,
+      "modified_prompt": "Is the red suitcase on the left or right side of the red stool?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "B",
+      "mllm_time": 0.24255108833312988
+    },
+    {
+      "sample_id": "190",
+      "original_prompt": "Is the white chair on the left or right side of the street?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "gt_response": "A",
+      "category": "relative_position",
+      "image_path": "relative_position/sa_78272.jpg",
+      "target_objects": [
+        "chair",
+        "street"
+      ],
+      "target_objects_extraction_time": 0.1300795078277588,
+      "bbox": [
+        [
+          817,
+          1013,
+          1153,
+          1349
+        ],
+        [
+          441,
+          1156,
+          777,
+          1492
+        ]
+      ],
+      "is_bbox": [
+        true,
+        true
+      ],
+      "ovd_time": 1.106903314590454,
+      "modified_prompt": "Is the white chair on the left or right side of the street?\n(A) right\n(B) left\nAnswer with the option's letter from the given choices directly.",
+      "pred_response": "A",
+      "mllm_time": 0.2431812286376953
+    }
+  ],
+  "time": {
+    "target_objects_extraction": 6.783434152603149,
+    "ovd_detection": 26.824265480041504,
+    "qa_generation": 12.158812522888184
+  }
+}

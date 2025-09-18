@@ -1,0 +1,38 @@
+question_file: /media/farrosalferro/College/research/Open-GroundingDino/data/vstar_bench/test_questions.jsonl
+answers_file: /media/farrosalferro/College/research/Open-GroundingDino/full_inference/answers/example_qwen.json
+image_folder: /media/farrosalferro/College/research/Open-GroundingDino/data/vstar_bench
+
+# mllm: llava_hf_05b
+mllm: qwen_3b
+# ovd: llmdet_tiny
+ovd: mmgroundingdino_tiny
+device_map: "cuda"
+
+# MLLM parameters
+# mllm_model_path: lmms-lab/llava-onevision-qwen2-0.5b-ov
+# mllm_model_path: llava-hf/llava-onevision-qwen2-0.5b-ov-hf
+mllm_model_path: Qwen/Qwen2.5-VL-3B-Instruct
+mllm_model_base: 
+extra_prompt: ""
+temperature: 0.2
+top_p:
+num_beams: 1
+
+# OVD parameters
+# ovd_model_path: iSEE-Laboratory/llmdet_tiny
+ovd_model_path: openmmlab-community/mm_grounding_dino_tiny_o365v1_goldg
+
+# Detection method parameters
+detection_args:
+  detection_method: recursion
+  min_region_size: 336
+  max_depth: 5
+  score_threshold: 0.4
+  # detection_method: sliding_window
+  # tile_size: 512
+  # overlap_ratio: 0.25
+  # score_threshold: 0.4
+
+prompting_method:
+  direct_attributes: explicit
+  relative_position: oracle
