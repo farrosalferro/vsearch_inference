@@ -19,10 +19,10 @@ def create_padded_crop_bbox(original_bbox, target_size=336, image_width=None, im
         [x1, y1, x2, y2] - padded crop box coordinates
     """
     # if original bbox is larger than target_size, no need to pad
+    x1, y1, x2, y2 = original_bbox
+
     if x2 - x1 > target_size or y2 - y1 > target_size:
         return original_bbox
-
-    x1, y1, x2, y2 = original_bbox
     
     # Calculate center of original bbox
     center_x = (x1 + x2) / 2
