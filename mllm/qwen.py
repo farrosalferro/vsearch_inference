@@ -58,11 +58,28 @@ class QwenProcessor(MLLMProcessor):
         inputs = self.processor(text=[input_prompt], padding=True, return_tensors="pt").to(self.model.device)
         return inputs, None
 
+    def _preprocess_for_baseline(self, sample):
+        question = sample["text"]
+        messages = [
+                {
+                    "role": "user",
+                    "content": [
+                        {"type": "text", "text": question},
+                    ],
+                }
+            ]
+
+        input_prompt = self.processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+        inputs = self.processor(text=[input_prompt], padding=True, return_tensors="pt").to(self.model.device)
+        return inputs, None
+
     def generate_answer(self, sample, image, output_template, phase="qa", ovd_results=None):
         if phase == "qa":
             inputs, output_template = self._preprocess_for_qa(sample, image, output_template, ovd_results)
         elif phase == "noun_extraction":
             inputs, output_template = self._preprocess_for_noun_extraction(sample)
+        elif phase == "baseline":
+            inputs, _ = self._preprocess_for_baseline(sample)
         
         with torch.inference_mode():
             output_ids = self.model.generate(

@@ -1,7 +1,7 @@
 import os
 import json
 import argparse
-from utils import load_mllm, load_ovd, SampleTemplate, fill_sample_information, time_function
+from utils import load_mllm, SampleTemplate, fill_sample_information, time_function
 from PIL import Image
 from config_parser import ConfigParser, config_to_args
 from tqdm import tqdm
@@ -23,7 +23,6 @@ def main(args):
     os.makedirs(os.path.dirname(answers_file), exist_ok=True)
 
     mllm_processor = load_mllm(args)
-    ovd_processor = load_ovd(args)
 
     for sample in tqdm(questions):
         # Create a typed template - starts as empty dict but has type hints
@@ -31,24 +30,9 @@ def main(args):
         image_file = os.path.join(args.image_folder, sample["image"])
         image = Image.open(image_file)
         fill_sample_information(sample_template, sample)
-
-        (extracted_nouns, _), noun_extraction_time = time_function(
-            mllm_processor.generate_answer, sample, None, None, phase="noun_extraction"
-        )
-        extracted_nouns = [noun.strip() for noun in extracted_nouns.split(",")]
-        sample_template["target_objects"] = extracted_nouns
-        sample_template["target_objects_extraction_time"] = noun_extraction_time
-        records["time"]["target_objects_extraction"] += noun_extraction_time
-
-        ovd_results, ovd_detection_time = time_function(
-            ovd_processor.run_detection, image, extracted_nouns
-        )
-        sample_template.update(ovd_results)
-        sample_template["ovd_time"] = ovd_detection_time
-        records["time"]["ovd_detection"] += ovd_detection_time
         
         (_, sample_template), qa_generation_time = time_function(
-            mllm_processor.generate_answer, sample, image, sample_template, phase="qa", ovd_results=ovd_results
+            mllm_processor.generate_answer, sample, image, sample_template, phase="baseline", ovd_results=None
         )
         sample_template["mllm_time"] = qa_generation_time
         records["time"]["qa_generation"] += qa_generation_time
